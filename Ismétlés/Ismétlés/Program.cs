@@ -94,6 +94,21 @@ namespace Ismétlés
                 Console.WriteLine(szamok2[i]);
             }
 
+            int[,] tomb2d = new int[20, 10];
+
+            for (int i = 0; i < 20; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    tomb2d[i, j] = rand.Next(-50, 50 + 1);
+                }
+
+            }
+
+            //Kiíratás!
+
+
+
             Console.ReadKey();
         }
     }
