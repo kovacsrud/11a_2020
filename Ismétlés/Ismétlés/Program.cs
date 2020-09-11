@@ -82,6 +82,17 @@ namespace Ismétlés
                 Console.WriteLine(szamok[i]);
             }
 
+            Random rand = new Random();
+
+            for (int i = 0; i < szamok2.Length; i++)
+            {
+                szamok2[i] = rand.Next(-50, 50 + 1);
+            }
+
+            for (int i = 0; i < szamok2.Length; i++)
+            {
+                Console.WriteLine(szamok2[i]);
+            }
 
             Console.ReadKey();
         }
