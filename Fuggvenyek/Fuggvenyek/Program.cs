@@ -35,6 +35,14 @@ namespace Fuggvenyek
             return a + b;
         }
 
+        static void Tombl(int[] tomb)
+        {
+            for (int i = 0; i < tomb.Length; i++)
+            {
+                Console.Write(tomb[i]+" ");
+            }
+        }
+
 
         static void Main(string[] args)
         {
@@ -45,15 +53,26 @@ namespace Fuggvenyek
             var a = Osszead(120, 210);
             Console.WriteLine(a);
 
-            Console.WriteLine(Osszead(233,111));
+            Console.WriteLine(Osszead(233, 111));
             Console.WriteLine(Osszead(22.54566, 34.556));
 
             int[] szamok = { 10, 26, 56, 77, 986, 2334, 677, 8767 };
 
             //írjon függvényt, amely kilistázza egy tömb elemeit
 
+            Tomblista(szamok);
+
+            Tombl(szamok);
 
             Console.ReadKey();
+        }
+
+        private static void Tomblista(int[] szamok)
+        {
+            for (int i = 0; i < szamok.Length; i++)
+            {
+                Console.Write(szamok[i] + " ");
+            }
         }
     }
 }
