@@ -48,6 +48,10 @@ namespace Fuggvenyek
             Console.WriteLine(Osszead(233,111));
             Console.WriteLine(Osszead(22.54566, 34.556));
 
+            int[] szamok = { 10, 26, 56, 77, 986, 2334, 677, 8767 };
+
+            //írjon függvényt, amely kilistázza egy tömb elemeit
+
 
             Console.ReadKey();
         }
