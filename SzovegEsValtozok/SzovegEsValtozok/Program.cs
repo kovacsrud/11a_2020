@@ -11,7 +11,7 @@ namespace SzovegEsValtozok
         static void Main(string[] args)
         {
             //Szöveges változókkal végzett fontosabb műveletek
-            string szoveg = "Valami,bármi,akármi";
+            string szoveg = "valami,bármi,akármi";
             string szoveg2 = "valami,BÁRMI,Akármi";
 
             //Kis- vagy nagybetűs megjelenítés
@@ -25,6 +25,31 @@ namespace SzovegEsValtozok
             {
                 Console.WriteLine("Nem egyeznek meg!");
                 
+            }
+
+            //Vizsgálatok
+            Console.WriteLine(szoveg.StartsWith("Val"));
+            Console.WriteLine(szoveg.ToUpper().StartsWith("Val".ToUpper()));
+
+            //Benne van?
+            Console.WriteLine(szoveg.Contains("bár"));
+
+            Console.WriteLine(szoveg.Replace(',',';'));
+
+            string datum = "2019.03.19";
+
+            string ev = datum.Substring(0, 4);
+            Console.WriteLine(ev);
+
+            string honap = datum.Substring(5,2);
+            Console.WriteLine(honap);
+
+            //Feldarabolás, Split
+            var elemek = datum.Split('.');
+
+            for (int i = 0; i < elemek.Length; i++)
+            {
+                Console.WriteLine(elemek[i]);
             }
 
 
