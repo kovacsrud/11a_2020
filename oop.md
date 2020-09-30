@@ -4,4 +4,7 @@ Struktúrált programozás - utasítások, elágazások, ciklusok, függvények.
 
 1990-es évek közepe -> Windows 95 megjelenése - egyre bonyolultabb programok.
 
-A mai programok nagy méretű osztálykönyvtárakon alapulnak. Ezek gyakorlatilag újrafelhasználható forráskódok.
+A mai programok nagy méretű osztálykönyvtárakon alapulnak. Ezek gyakorlatilag újrafelhasználható forráskódok. 
+Java, C# , Python, Android
+
+
