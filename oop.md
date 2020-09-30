@@ -53,3 +53,5 @@ Kiss Ubul
 
 Nagy Éva
 
+
+Az osztály egy jól körülhatárolható egység. Az adatait és a metódusait magába zárja, és a külvilág felé csak az lesz látható, ami szükséges.
