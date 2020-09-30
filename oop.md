@@ -23,8 +23,33 @@ Osztály
 Tanulo
 ----------
 Nev
+
 Magassag
+
 Suly
+
 Szuletesi Ev
+
 Anyja Neve
+
 ----
+Tanul()
+
+Pihen()
+
+Eszik()
+
+Alszik()
+-------------
+
+példány:
+Kiss Ubul
+
+180
+
+70
+
+2001
+
+Nagy Éva
+
