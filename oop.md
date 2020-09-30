@@ -15,4 +15,16 @@ Az osztály két fajta dolgot tartalmazhat:
 -tulajdonságok (ezek gyakorlatilag adatok, másképpen mondva: változók)
 -metódusok (ezek gyakorlatilag függvények) ezek határozzák meg, hogy az objektum mit tud majd megcsinálni.
 
-Az egymással összezárt adatok és metódusok jelentik az osztályt
+Az egymással összezárt adatok és metódusok jelentik az osztályt.
+
+Példa:
+
+Osztály
+Tanulo
+----------
+Nev
+Magassag
+Suly
+Szuletesi Ev
+Anyja Neve
+----
