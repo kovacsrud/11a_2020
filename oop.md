@@ -101,6 +101,11 @@ public class Tanulo
         {
             Console.WriteLine("A tanuló alszik");
         }
+        
+        public void Bemutatkozik()
+        {
+            Console.WriteLine($"Hello, {nev} vagyok");
+        }
 
     }
  ```
