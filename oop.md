@@ -109,3 +109,34 @@ public class Tanulo
 
     }
  ```
+ 
+ A főprogram így néz ki:
+ 
+ ```c#
+ class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Tanulo ubul = new Tanulo();
+
+            ubul.nev = "Ubul";
+            ubul.magassag = 180;
+            ubul.suly = 75;
+            ubul.szulev = 1999;
+
+            ubul.Tanul();
+            ubul.Iszik();
+            ubul.Eszik();
+            ubul.Alszik();
+
+            Tanulo zeno = new Tanulo();
+
+            zeno.nev = "Zénó";
+
+
+
+            Console.ReadKey();
+        }
+    }
+```    
