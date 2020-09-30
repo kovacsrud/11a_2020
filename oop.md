@@ -55,3 +55,18 @@ Nagy Éva
 
 
 Az osztály egy jól körülhatárolható egység. Az adatait és a metódusait magába zárja, és a külvilág felé csak az lesz látható, ami szükséges.
+
+```c#
+public class Tanulo
+    {
+        public string nev;
+        public int magassag;
+        public int suly;
+        public int szulev;
+        public string anyjaNeve;
+
+
+
+
+    }
+```
