@@ -106,6 +106,11 @@ public class Tanulo
         {
             Console.WriteLine($"Hello, {nev} vagyok");
         }
+        
+        public void NevBeallit(string benev)
+        {
+            nev = benev;
+        }
 
     }
  ```
