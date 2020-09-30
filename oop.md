@@ -70,3 +70,37 @@ public class Tanulo
 
     }
 ```
+
+Az osztály adatokkal és metódusokkal:
+```C#
+public class Tanulo
+    {
+        public string nev;
+        public int magassag;
+        public int suly;
+        public int szulev;
+        public string anyjaNeve;
+
+        public void Tanul()
+        {
+            Console.WriteLine("A tanuló tanul.");
+        }
+
+        public void Eszik()
+        {
+            Console.WriteLine("A tanuló eszik");
+        }
+
+        public void Iszik()
+        {
+            Console.WriteLine("A tanuló iszik");
+
+        }
+
+        public void Alszik()
+        {
+            Console.WriteLine("A tanuló alszik");
+        }
+
+    }
+ ```
