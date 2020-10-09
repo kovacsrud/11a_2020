@@ -25,7 +25,9 @@ namespace Osztaly
 
             e2.Koszon("Csá csumi");
 
-
+            Tanulo t1 = new Tanulo("Ubul", 182, 78, 2001);
+            t1.Suly = 74;
+            
 
 
             Console.ReadKey();
