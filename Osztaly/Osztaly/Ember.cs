@@ -17,13 +17,21 @@ namespace Osztaly
         //lefut
         public Ember(string benev,int bemagassag,int besuly,int beszulev)
         {
-
+            nev = benev;
+            magassag = bemagassag;
+            suly = besuly;
+            szulev = beszulev;
         }
 
 
         public void Koszon(string koszones)
         {
             Console.WriteLine($"{koszones},{nev} vagyok ");
+        }
+
+        public int GetMagassag()
+        {
+            return magassag;
         }
 
     }
