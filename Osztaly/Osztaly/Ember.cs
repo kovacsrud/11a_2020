@@ -34,5 +34,10 @@ namespace Osztaly
             return magassag;
         }
 
+        public void SetMagassag(int bemagassag)
+        {
+            magassag = bemagassag;
+        }
+
     }
 }
