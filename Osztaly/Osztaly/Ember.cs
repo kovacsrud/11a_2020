@@ -13,9 +13,17 @@ namespace Osztaly
         private int suly;
         private int szulev;
 
-        public void Koszon()
+        //Konstruktor, a példányosításkor automatikusan
+        //lefut
+        public Ember(string benev,int bemagassag,int besuly,int beszulev)
         {
-            Console.WriteLine("Hello.");
+
+        }
+
+
+        public void Koszon(string koszones)
+        {
+            Console.WriteLine($"{koszones},{nev} vagyok ");
         }
 
     }
