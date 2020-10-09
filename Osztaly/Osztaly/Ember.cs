@@ -8,10 +8,10 @@ namespace Osztaly
 {
     public class Ember
     {
-        public string nev;
-        public int magassag;
-        public int suly;
-        public int szulev;
+        private string nev;
+        private int magassag;
+        private int suly;
+        private int szulev;
 
         public void Koszon()
         {

@@ -18,6 +18,13 @@ namespace Osztaly
 
             e1.Koszon();
 
+            Ember e2 = new Ember();
+            e2.nev = "Gerzson";
+            e2.magassag = 196;
+            e2.suly = 69;
+            e2.szulev = 2001;
+            e2.Koszon();
+
 
 
 
