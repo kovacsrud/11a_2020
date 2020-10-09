@@ -11,7 +11,20 @@ namespace Osztaly
       
 
         public string Nev { get; set; }
-        public int Magassag { get; set; }
+        private int magassag;
+        public int Magassag {
+            get { return magassag; }
+            set
+            {
+                if (value>=100 && value<=240)
+                {
+                    magassag = value;
+                }else
+                {
+                    magassag = 165;
+                }
+            }
+        }
         public int Suly { get; set; }
         public int Szulev { get; set; }
 

@@ -27,7 +27,10 @@ namespace Osztaly
 
             Tanulo t1 = new Tanulo("Ubul", 182, 78, 2001);
             t1.Suly = 74;
-            
+
+            Tanulo t2 = new Tanulo("Elek", 95, 58, 2002);
+
+            Console.WriteLine(t2.Magassag);
 
 
             Console.ReadKey();
