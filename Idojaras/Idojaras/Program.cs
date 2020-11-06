@@ -87,7 +87,13 @@ namespace Idojaras
             }
 
 
-            var evesatlagho = idojarasadatok.ToLookup(x=>x.Ev);
+            var evesatlagho = idojarasadatok.ToLookup(x=>new {x.Ev,x.Honap}).OrderBy(x=>x.Key.Ev).ThenBy(x=>x.Key.Honap);
+
+            foreach (var i in evesatlagho)
+            {
+                Console.WriteLine($"{i.Key.Ev}-{i.Key.Honap}:{i.Average(x=>x.Homerseklet)}");
+            }
+
 
 
             Console.ReadKey();
