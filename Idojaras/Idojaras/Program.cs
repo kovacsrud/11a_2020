@@ -57,11 +57,13 @@ namespace Idojaras
                 Console.WriteLine($"{ev2007.Ev}.{ev2007.Honap}.{ev2007.Nap}");
             }
 
-            var kiirando = idojarasadatok.FindAll(x => x.Ev == 2008);
+            var kiirando = idojarasadatok.FindAll(x => x.Ev == 2008).OrderBy(x=>x.Honap).ThenBy(x=>x.Nap).ThenBy(x=>x.Ora);
+
+
 
             try
             {
-                FileStream fajl = new FileStream("ev_2008.csv", FileMode.CreateNew);
+                FileStream fajl = new FileStream("ev_2008.csv", FileMode.Create);
 
                 using (StreamWriter writer = new StreamWriter(fajl, Encoding.Default))
                 {
@@ -83,7 +85,9 @@ namespace Idojaras
             {
                 Console.WriteLine(ex.Message);
             }
-        
+
+
+            var evesatlagho = idojarasadatok.ToLookup(x=>x.Ev);
 
 
             Console.ReadKey();
