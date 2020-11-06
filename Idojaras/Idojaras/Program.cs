@@ -40,6 +40,14 @@ namespace Idojaras
 
             Console.WriteLine($"Sorok száma:{idojarasadatok.Count}");
 
+            var ev2016 = idojarasadatok.FindAll(x => x.Ev == 2016 && x.Honap==11);
+
+            foreach (var i in ev2016)
+            {
+                Console.WriteLine($"{i.Ev}.{i.Honap}.{i.Nap} {i.Ora}");
+            }
+
+
             Console.ReadKey();
         }
     }
