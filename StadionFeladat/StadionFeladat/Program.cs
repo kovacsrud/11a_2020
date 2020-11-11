@@ -36,6 +36,13 @@ namespace StadionFeladat
 
             Console.WriteLine($"Feladat 3. Stadionok száma:{stadionok.Count}");
 
+            var legkisebb = stadionok.FindAll(x=>x.Ferohely==stadionok.Min(y=>y.Ferohely));
+
+            foreach (var i in legkisebb)
+            {
+                Console.WriteLine($"Feladat 4. {i.Varos},{i.Nev1},{i.Nev2},{i.Ferohely}");
+            }
+
             Console.ReadKey();
         }
     }
