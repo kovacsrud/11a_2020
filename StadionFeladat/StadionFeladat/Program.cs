@@ -43,6 +43,14 @@ namespace StadionFeladat
                 Console.WriteLine($"Feladat 4. {i.Varos},{i.Nev1},{i.Nev2},{i.Ferohely}");
             }
 
+            var atlag = stadionok.Average(x => x.Ferohely);
+
+            Console.WriteLine($"Feladat 5. Átlagos férőhelyszám:{atlag:0.0}");
+
+            var altnev = stadionok.FindAll(x=>x.Nev2!="n.a.").Count;
+
+            Console.WriteLine($"Feladat 6. Két néven is ismert stadionok száma:{altnev}");
+
             Console.ReadKey();
         }
     }
