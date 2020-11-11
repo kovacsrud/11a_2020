@@ -69,6 +69,10 @@ namespace StadionFeladat
                 Console.WriteLine("A város VB helyszín!");
             }
 
+            var kulonbozovaros = stadionok.ToLookup(x=>x.Varos);
+
+            Console.WriteLine($"Feladat 8: {kulonbozovaros.Count} különböző városban voltak mérkőzések");
+
             Console.ReadKey();
         }
     }
