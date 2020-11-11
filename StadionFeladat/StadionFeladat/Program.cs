@@ -51,6 +51,24 @@ namespace StadionFeladat
 
             Console.WriteLine($"Feladat 6. Két néven is ismert stadionok száma:{altnev}");
 
+            Console.Write("Adjon meg egy várost:");
+            var varos = Console.ReadLine();
+            while (varos.Length<3)
+            {
+                Console.Write("Nem jó, ismét!:");
+                varos = Console.ReadLine();
+            }
+
+            var varoskeres = stadionok.Find(x=>x.Varos.ToLower()==varos.ToLower());
+
+            if (varoskeres==null)
+            {
+                Console.WriteLine("A város nem VB helyszín!");
+            } else
+            {
+                Console.WriteLine("A város VB helyszín!");
+            }
+
             Console.ReadKey();
         }
     }
