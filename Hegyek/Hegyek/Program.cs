@@ -72,6 +72,15 @@ namespace Hegyek
             var magasabb3000 = hegycsucsok.Count(x=>x.Magassag*3.28>3000);
             Console.WriteLine($"7.feladat: 3000 lábnál magasabb hegycsúcsok száma:{magasabb3000}");
 
+            var stat = hegycsucsok.ToLookup(x=>x.Hegyseg);
+
+            foreach (var i in stat)
+            {
+                Console.WriteLine($"{i.Key} - {i.Count()} db");
+            }
+
+
+
 
             Console.ReadKey();
         }
