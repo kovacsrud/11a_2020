@@ -37,7 +37,7 @@ namespace Hegyek
 
             var atlagmagassag = hegycsucsok.Average(x=>x.Magassag);
 
-            Console.WriteLine($"4.feladat:Hegycsúcsok átlagos magassága:{atlagmagassag:0.00} m");
+            Console.WriteLine($"4.feladat:Hegycsúcsok átlagos magassága:{atlagmagassag:#0.00} m");
 
             var legmagasabb = hegycsucsok.Find(x => x.Magassag ==hegycsucsok.Max(y=>y.Magassag));
 
@@ -79,8 +79,26 @@ namespace Hegyek
                 Console.WriteLine($"{i.Key} - {i.Count()} db");
             }
 
+            var bukkadatok = hegycsucsok.FindAll(x=>x.Hegyseg=="Bükk-vidék");
 
+            try
+            {
+                FileStream fajl = new FileStream("bukk-videk.txt",FileMode.Create);
+                StreamWriter writer = new StreamWriter(fajl, Encoding.Default);
 
+                writer.WriteLine("Hegycsúcs neve;Magasság láb");
+
+                foreach (var i in bukkadatok)
+                {
+                    writer.WriteLine($"{i.HegycsucsNeve};{i.Magassag*3.28:0.#}");
+                }
+                Console.WriteLine("Fájlba írás kész!");
+                writer.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);                
+            }
 
             Console.ReadKey();
         }
