@@ -35,6 +35,10 @@ namespace Hegyek
 
             Console.WriteLine($"3.feladat: Hegycsúcsok száma:{hegycsucsok.Count} db");
 
+            var atlagmagassag = hegycsucsok.Average(x=>x.Magassag);
+
+            Console.WriteLine($"4.feladat:Hegycsúcsok átlagos magassága:{atlagmagassag} m");
+
             Console.ReadKey();
         }
     }
