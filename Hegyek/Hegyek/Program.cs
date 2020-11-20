@@ -37,7 +37,15 @@ namespace Hegyek
 
             var atlagmagassag = hegycsucsok.Average(x=>x.Magassag);
 
-            Console.WriteLine($"4.feladat:Hegycsúcsok átlagos magassága:{atlagmagassag} m");
+            Console.WriteLine($"4.feladat:Hegycsúcsok átlagos magassága:{atlagmagassag:0.00} m");
+
+            var legmagasabb = hegycsucsok.Find(x => x.Magassag ==hegycsucsok.Max(y=>y.Magassag));
+
+            Console.WriteLine($"5.feladat:" +
+                $"A legmagasabb hegycsúcs:{legmagasabb.HegycsucsNeve} "+
+                $"Hegység neve:{legmagasabb.Hegyseg} "+
+                $"Magasság:{legmagasabb.Magassag}"
+                );
 
             Console.ReadKey();
         }
