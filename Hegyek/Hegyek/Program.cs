@@ -41,11 +41,35 @@ namespace Hegyek
 
             var legmagasabb = hegycsucsok.Find(x => x.Magassag ==hegycsucsok.Max(y=>y.Magassag));
 
-            Console.WriteLine($"5.feladat:" +
-                $"A legmagasabb hegycsúcs:{legmagasabb.HegycsucsNeve} "+
-                $"Hegység neve:{legmagasabb.Hegyseg} "+
-                $"Magasság:{legmagasabb.Magassag}"
-                );
+            Console.WriteLine($@"5.feladat:
+              A legmagasabb hegycsúcs:{legmagasabb.HegycsucsNeve} 
+              Hegység neve:{legmagasabb.Hegyseg} 
+              Magasság:{legmagasabb.Magassag}"
+            );
+
+            Console.Write("Adjon meg egy magasságot:");
+            var bemagassag = Convert.ToInt32(Console.ReadLine());
+
+            var magasabbe = hegycsucsok.Find(x=>x.Hegyseg=="Börzsöny" && x.Magassag>bemagassag);
+
+            if (magasabbe==null)
+            {
+                Console.WriteLine($"Nincs {bemagassag}-nál magasabb csúcs.");
+            } else
+            {
+                Console.WriteLine($"Van {bemagassag}-nál magasabb csúcs.");
+            }
+
+            var magasabbef = hegycsucsok.FindAll(x=>x.Hegyseg=="Börzsöny" && x.Magassag>bemagassag);
+            if (magasabbef.Count>0)
+            {
+                Console.WriteLine($"Van {bemagassag}-nál magasabb csúcs.");
+            } else
+            {
+                Console.WriteLine($"Nincs {bemagassag}-nál magasabb csúcs.");
+            }
+
+
 
             Console.ReadKey();
         }
