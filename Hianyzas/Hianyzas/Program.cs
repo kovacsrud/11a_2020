@@ -74,6 +74,31 @@ namespace Hianyzas
                 }
             }
 
+            var osszesites = hianyzasok.ToLookup(x=>x.Osztaly).OrderBy(x=>x.Key);
+
+            foreach (var i in osszesites)
+            {
+                Console.WriteLine($"{i.Key},{i.Count()},{i.Sum(x=>x.Mulasztottorak)}");
+            }
+
+            try
+            {
+                FileStream fajl = new FileStream("osszesites.csv",FileMode.Create);
+                StreamWriter writer = new StreamWriter(fajl, Encoding.Default);
+
+                foreach (var i in osszesites)
+                {
+                    writer.WriteLine($"{i.Key};{i.Sum(x=>x.Mulasztottorak)}");
+                }
+
+                Console.WriteLine("Fájl kiírva");
+                writer.Close();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);                
+            }
 
             Console.ReadKey();
         }
