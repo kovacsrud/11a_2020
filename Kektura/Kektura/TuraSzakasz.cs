@@ -14,6 +14,7 @@ namespace Kektura
         public int EmelkedesOsszeg { get; set; }
         public int LejtesOsszeg { get; set; }
         public string Pecsetelohely { get; set; }
+        public int TengerszintFelettiMagassag { get; set; }
 
         public bool HianyosNev()
         {

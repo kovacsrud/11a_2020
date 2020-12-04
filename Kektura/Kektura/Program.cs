@@ -16,20 +16,24 @@ namespace Kektura
             try
             {
                 var sorok = File.ReadAllLines("kektura.csv", Encoding.Default);
+                var aktualismagassag = Convert.ToInt32(sorok[0]);
                 for (int i = 1; i < sorok.Length; i++)
                 {
                     var e = sorok[i].Split(';');
+                    aktualismagassag += Convert.ToInt32(e[3]) - Convert.ToInt32(e[4]);
                     teljestura.Add(
                         new TuraSzakasz
                         {
+                           
                             Kiindulopont = e[0],
                             Vegpont = e[1],
                             SzakaszHossz = Convert.ToDouble(e[2]),
-                            EmelkedesOsszeg=Convert.ToInt32(e[3]),
-                            LejtesOsszeg=Convert.ToInt32(e[4]),
-                            Pecsetelohely=e[5]
+                            EmelkedesOsszeg = Convert.ToInt32(e[3]),
+                            LejtesOsszeg = Convert.ToInt32(e[4]),
+                            Pecsetelohely = e[5],
+                            TengerszintFelettiMagassag = aktualismagassag
                         }
-                        ); 
+                        );  
                 }
             }
             catch (Exception ex)
@@ -63,15 +67,8 @@ namespace Kektura
                 }
             }
 
-            Console.WriteLine("-------------");
-
-            foreach (var i in teljestura)
-            {
-                if (i.Pecsetelohely=="i")
-                {
-                    Console.WriteLine($"{i.Vegpont}");
-                }
-            }
+            
+           
 
 
 
