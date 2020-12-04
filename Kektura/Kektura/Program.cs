@@ -67,7 +67,11 @@ namespace Kektura
                 }
             }
 
-            
+            var maxmagassag = teljestura.Max(x=>x.TengerszintFelettiMagassag);
+            var legmagasabb = teljestura.Find(x=>x.TengerszintFelettiMagassag==maxmagassag);
+            Console.WriteLine($@"8 feladat: A túra legmagasabban fekvő végpontja:
+             A végpont neve:{legmagasabb.Vegpont}               
+             Magassága:{legmagasabb.TengerszintFelettiMagassag}");
            
 
 
