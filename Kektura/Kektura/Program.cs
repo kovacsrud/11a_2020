@@ -12,11 +12,13 @@ namespace Kektura
         static void Main(string[] args)
         {
             List<TuraSzakasz> teljestura = new List<TuraSzakasz>();
-
+            var kezdomagassag = 0;
             try
             {
                 var sorok = File.ReadAllLines("kektura.csv", Encoding.Default);
                 var aktualismagassag = Convert.ToInt32(sorok[0]);
+                kezdomagassag = aktualismagassag;
+
                 for (int i = 1; i < sorok.Length; i++)
                 {
                     var e = sorok[i].Split(';');
@@ -72,7 +74,33 @@ namespace Kektura
             Console.WriteLine($@"8 feladat: A túra legmagasabban fekvő végpontja:
              A végpont neve:{legmagasabb.Vegpont}               
              Magassága:{legmagasabb.TengerszintFelettiMagassag}");
-           
+
+
+            try
+            {
+                FileStream fajl = new FileStream("kektura2.csv",FileMode.Create);
+                StreamWriter writer = new StreamWriter(fajl,Encoding.Default);
+                writer.WriteLine(kezdomagassag);
+
+                foreach (var i in teljestura)
+                {
+                    if (i.HianyosNev())
+                    {
+                        writer.WriteLine($"{i.Kiindulopont};{i.Vegpont} pecsetelohely;{i.EmelkedesOsszeg};{i.LejtesOsszeg};{i.Pecsetelohely}");
+                    }else
+                    {
+                        writer.WriteLine($"{i.Kiindulopont};{i.Vegpont};{i.EmelkedesOsszeg};{i.LejtesOsszeg};{i.Pecsetelohely}");
+                    }
+                }
+
+
+                writer.Close();
+                Console.WriteLine("Kiírás kész");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);                
+            }
 
 
 
