@@ -53,6 +53,28 @@ namespace Kektura
             Távolság:{legr_adatai.SzakaszHossz} km
             ");
 
+            Console.WriteLine($"Feladat 7: Hiányos állomásnevek");
+
+            foreach (var i in teljestura)
+            {
+                if (i.HianyosNev())
+                {
+                    Console.WriteLine($"{i.Vegpont}");
+                }
+            }
+
+            Console.WriteLine("-------------");
+
+            foreach (var i in teljestura)
+            {
+                if (i.Pecsetelohely=="i")
+                {
+                    Console.WriteLine($"{i.Vegpont}");
+                }
+            }
+
+
+
             Console.ReadKey();
         }
     }
