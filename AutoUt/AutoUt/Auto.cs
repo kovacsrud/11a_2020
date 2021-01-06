@@ -10,5 +10,10 @@ namespace AutoUt
     {
         public string Tipus { get; set; }
         public int SebessegKmh { get; set; }
+
+        public double EnnyitHalad()
+        {
+            return SebessegKmh / 3.6;
+        }
     }
 }

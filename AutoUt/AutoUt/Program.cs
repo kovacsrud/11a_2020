@@ -10,7 +10,11 @@ namespace AutoUt
     {
         static void Main(string[] args)
         {
+            Auto auto = new Auto { Tipus="Opel", SebessegKmh=90};
 
+            Console.WriteLine(auto.EnnyitHalad());
+
+            
 
             Console.ReadKey();
         }
