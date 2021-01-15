@@ -32,6 +32,12 @@ namespace Munkavallalo
                 dolgozok.Add(dolgozo);
             }
 
+            foreach (var i in dolgozok)
+            {
+                Console.WriteLine($"{i.Nev},{i.Munkakor},{i.Szuletesiev},{i.Eletkor()}");
+            }
+
+
             Console.ReadKey();
         }
     }
