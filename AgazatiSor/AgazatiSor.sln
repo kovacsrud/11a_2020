@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgazatiSor", "AgazatiSor\Ag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homerseklet", "Homerseklet\Homerseklet.csproj", "{A08A0F31-8BDC-4111-950A-AEE72465467C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Munkavallalo", "Munkavallalo\Munkavallalo.csproj", "{1D345CB4-5554-4DD6-8F18-B8440BF3EF6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A08A0F31-8BDC-4111-950A-AEE72465467C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A08A0F31-8BDC-4111-950A-AEE72465467C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A08A0F31-8BDC-4111-950A-AEE72465467C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D345CB4-5554-4DD6-8F18-B8440BF3EF6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D345CB4-5554-4DD6-8F18-B8440BF3EF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D345CB4-5554-4DD6-8F18-B8440BF3EF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D345CB4-5554-4DD6-8F18-B8440BF3EF6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
