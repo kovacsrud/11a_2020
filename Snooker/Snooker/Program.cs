@@ -49,6 +49,37 @@ namespace Snooker
             {
                 Console.WriteLine("Nincs ilyen adat");
             }
+            var norveg = versenyzok.FindAll(x=>x.Orszag=="Norvégia");
+
+            if (norveg.Count>0)
+            {
+                Console.WriteLine($"6.feladat: A versenyzők között van norvég versenyző");
+            } else
+            {
+                Console.WriteLine($"6.feladat: A versenyzők között nincs norvég versenyző");
+            }
+
+            if (versenyzok.Any(x=>x.Orszag=="Norvégia"))
+            {
+                Console.WriteLine($"6.feladat: A versenyzők között van norvég versenyző");
+            }
+            else
+            {
+                Console.WriteLine($"6.feladat: A versenyzők között nincs norvég versenyző");
+            }
+
+            var statisztika = versenyzok.ToLookup(x=>x.Orszag);
+
+            Console.WriteLine($"7.feladat Statisztika");
+
+            foreach (var i in statisztika)
+            {
+                if (i.Count()>4)
+                {
+                    Console.WriteLine($"{i.Key} - {i.Count()} fő");
+                }
+                
+            }
 
             Console.ReadKey();
         }
