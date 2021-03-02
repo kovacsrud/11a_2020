@@ -70,6 +70,69 @@ namespace Toto
 
             Console.WriteLine($"4.feladat: Telitalálatos szelvények száma:{telitalalatDb} db");
 
+            var atlagNyeremeny = fogadasok.FindAll(x=>x.T13p1>0).Average(x=>(x.T13p1*x.Ny13p1));
+
+            Console.WriteLine($"5.feladat: Átlag:{atlagNyeremeny:0} Ft");
+
+            var minNyeremeny = fogadasok.FindAll(x => x.T13p1 > 0).Min(x => x.Ny13p1);
+
+            var minFordulo = fogadasok.Find(x=>x.Ny13p1==minNyeremeny);
+
+            var maxNyeremeny = fogadasok.FindAll(x=>x.T13p1>0).Max(x=>x.Ny13p1);
+
+            var maxFordulo = fogadasok.Find(x=>x.Ny13p1==maxNyeremeny);
+
+            Console.WriteLine($@"6.feladat:
+            Legnagyobb:
+            Év:{maxFordulo.Ev}
+            Hét:{maxFordulo.Het}
+            Forduló:{maxFordulo.Fordulo}
+            Telitalálat:{maxFordulo.T13p1}
+            Nyeremény:{maxFordulo.Ny13p1} Ft
+            Eredmények:{maxFordulo.Eredmenyek}
+            Legkisebb:
+            Év:{minFordulo.Ev}
+            Hét:{minFordulo.Het}
+            Forduló:{minFordulo.Fordulo}
+            Telitalálat:{minFordulo.T13p1}
+            Nyeremény:{minFordulo.Ny13p1} Ft
+            Eredmények:{minFordulo.Eredmenyek}");
+
+            var nincsdontetlen = fogadasok.FindAll(x=>!x.Eredmenyek.Contains("x"));
+
+            if (nincsdontetlen.Count>0)
+            {
+                Console.WriteLine("Van olyan forduló, ahol nem volt döntetlen!");
+            } else
+            {
+                Console.WriteLine("Nincs olyan forduló, ahol nem volt döntetlen!");
+            }
+
+            //Eredmenyelemzo osztály használata
+            List<EredmenyElemzo> eredmenyelemek = new List<EredmenyElemzo>();
+
+            foreach (var i in fogadasok)
+            {
+                eredmenyelemek.Add(new EredmenyElemzo(i.Eredmenyek));
+            }
+
+
+            var elemzes = eredmenyelemek.Find(x=>x.NemvoltDontetlenMerkozes==true);
+
+            if (elemzes!=null)
+            {
+                Console.WriteLine("Van olyan forduló, ahol nem volt döntetlen!");
+            } else
+            {
+                Console.WriteLine("Nincs olyan forduló, ahol nem volt döntetlen!");
+            }
+
+
+            //foreach (var i in eredmenyelemek)
+            //{
+            //    Console.WriteLine($"{i.NemvoltDontetlenMerkozes}");
+            //}
+
             Console.ReadKey();
         }
     }
