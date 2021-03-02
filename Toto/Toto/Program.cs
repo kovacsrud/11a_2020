@@ -65,6 +65,11 @@ namespace Toto
 
             Console.WriteLine($"3.feladat: Fordulók száma:{fogadasok.Count}");
 
+            //var telitalalatDb = fogadasok.FindAll(x=>x.T13p1>0).Sum(x=>x.T13p1);
+            var telitalalatDb = fogadasok.Sum(x => x.T13p1);
+
+            Console.WriteLine($"4.feladat: Telitalálatos szelvények száma:{telitalalatDb} db");
+
             Console.ReadKey();
         }
     }
