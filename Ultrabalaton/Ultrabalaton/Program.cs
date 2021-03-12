@@ -53,11 +53,24 @@ namespace Ultrabalaton
                 Console.WriteLine($"Indult egyéniben a sportoló? Nem");
             }
 
-            foreach (var i in versenyzok)
-            {
-                Console.WriteLine($"{i.VersenyzoNev},{i.IdoOraban():0.00}");
-            }
+            //foreach (var i in versenyzok)
+            //{
+            //    Console.WriteLine($"{i.VersenyzoNev},{i.IdoOraban():0.00}");
+            //}
+            var ferfiAtlag = versenyzok.FindAll(x=>x.Kategoria=="Ferfi" && x.Tavszazalek==100).Average(x=>x.IdoOraban());
+            Console.WriteLine($"7.feladat Átlagos idő:{ferfiAtlag}");
 
+            var ferfiCel = versenyzok.FindAll(x=>x.Kategoria=="Ferfi" && x.Tavszazalek==100);
+            var noCel = versenyzok.FindAll(x=>x.Kategoria=="Noi" && x.Tavszazalek==100);
+
+            var ferfiGyoztes = ferfiCel.Find(x=>x.IdoOraban()==ferfiCel.Min(y=>y.IdoOraban()));
+
+            var noGyoztes = noCel.Find(x=>x.IdoOraban()==noCel.Min(y=>y.IdoOraban()));
+
+            Console.WriteLine($@"8.feladat A verseny győztesei:
+            Nők:{noGyoztes.VersenyzoNev},({noGyoztes.RajtSzam}.) - {noGyoztes.VersenyIdo}
+            Férfiak:{ferfiGyoztes.VersenyzoNev},({ferfiGyoztes.RajtSzam}.) - {ferfiGyoztes.VersenyIdo}
+            ");
 
             Console.ReadKey();
         }
