@@ -53,6 +53,11 @@ namespace Ultrabalaton
                 Console.WriteLine($"Indult egyéniben a sportoló? Nem");
             }
 
+            foreach (var i in versenyzok)
+            {
+                Console.WriteLine($"{i.VersenyzoNev},{i.IdoOraban():0.00}");
+            }
+
 
             Console.ReadKey();
         }

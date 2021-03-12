@@ -33,7 +33,7 @@ namespace Ultrabalaton
             double perc = Convert.ToDouble(e[1]);
             double masodperc = Convert.ToDouble(e[2]);
 
-            return (ora * 3600) + (perc * 60) + masodperc; 
+            return ((ora * 3600) + (perc * 60) + masodperc)/3600; 
 
         }
 
