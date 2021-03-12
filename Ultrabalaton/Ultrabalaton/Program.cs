@@ -36,8 +36,22 @@ namespace Ultrabalaton
             Console.Write("Adja meg egy sportoló nevét:");
             var sportoloNev = Console.ReadLine();
 
+            var indult = versenyzok.Find(x=>x.VersenyzoNev==sportoloNev);
 
-
+            if (indult!=null)
+            {
+                Console.WriteLine($"Indult egyéniben a sportoló? Igen");
+                if (indult.Tavszazalek==100)
+                {
+                    Console.WriteLine("Teljesítette a teljes távot? Igen");
+                } else
+                {
+                    Console.WriteLine("Teljesítette a teljes távot? Nem");
+                }
+            } else
+            {
+                Console.WriteLine($"Indult egyéniben a sportoló? Nem");
+            }
 
 
             Console.ReadKey();
