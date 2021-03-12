@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfOra.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfOra"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        
+        <TextBlock HorizontalAlignment="Left" Height="50" Margin="10,119,0,0" TextWrapping="Wrap" Text="Az idő óó:pp:mm formában:" VerticalAlignment="Top" Width="403" FontSize="30" FontWeight="Bold"/>
+        <TextBlock x:Name="textblockOra" HorizontalAlignment="Left" Height="50" Margin="213,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="403" FontSize="30" FontWeight="Bold" TextAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textboxIdo" HorizontalAlignment="Left" Height="50" Margin="438,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" FontSize="30" TextAlignment="Center" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonSzamol" Content="Számol" HorizontalAlignment="Left" Height="57" Margin="331,313,0,0" VerticalAlignment="Top" Width="151" FontSize="24" Click="buttonSzamol_Click"/>
+
+    </Grid>
+</Window>
