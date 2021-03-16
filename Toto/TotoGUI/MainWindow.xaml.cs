@@ -24,5 +24,47 @@ namespace TotoGUI
         {
             InitializeComponent();
         }
+
+        private void textboxFordulo_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            textblockHossz.Text = $"({textboxFordulo.Text.Length})";
+            if (textboxFordulo.Text.Length!=14)
+            {
+                checkboxKarszam.IsChecked = true;
+            } else
+            {
+                checkboxKarszam.IsChecked = false;
+            }
+
+            char[] joEredmenyek = { '1', '2', 'x' };
+
+            char[] aktEredmenyek = textboxFordulo.Text.ToCharArray();
+
+            textblockHelytelen.Text = "";
+
+            for (int i = 0; i < aktEredmenyek.Length; i++)
+            {
+                if (!joEredmenyek.Contains(aktEredmenyek[i]))
+                {
+                    textblockHelytelen.Text += aktEredmenyek[i] + " ";
+                }
+            }
+
+            if (textblockHelytelen.Text.Length>0)
+            {
+                checkboxRosszkar.IsChecked = true;
+            } else
+            {
+                checkboxRosszkar.IsChecked = false;
+            }
+
+            if (checkboxRosszkar.IsChecked==false && checkboxKarszam.IsChecked==false)
+            {
+                buttonMentes.IsEnabled = true;
+            } else
+            {
+                buttonMentes.IsEnabled = false;
+            }
+        }
     }
 }
