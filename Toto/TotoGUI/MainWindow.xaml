@@ -6,8 +6,14 @@
         xmlns:local="clr-namespace:TotoGUI"
         mc:Ignorable="d"
         Title="Totó eredmény ellenőrző" Height="450" Width="800">
-    <Grid>
+    <Grid IsEnabled="False">
         <TextBlock HorizontalAlignment="Left" Margin="10,60,0,0" TextWrapping="Wrap" Text="Kérem a forduló eredményeit [1,2,x]:" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="textboxFordulo" HorizontalAlignment="Left" Height="30" Margin="10,106,0,0" TextWrapping="Wrap" Text="12X12X12X12X12" VerticalAlignment="Top" Width="428" FontSize="20"/>
+        <CheckBox x:Name="checkboxKarszam" Content="Nem megfelelő a karakterek száma" HorizontalAlignment="Left" Margin="10,173,0,0" VerticalAlignment="Top" FontSize="20" Height="30" IsEnabled="False"/>
+        <CheckBox x:Name="checkboxRosszkar" Content="Helytelen karakter az eredményekben" HorizontalAlignment="Left" Margin="10,227,0,0" VerticalAlignment="Top" FontSize="20" Height="30" IsEnabled="False"/>
+        <TextBlock x:Name="textblockHelytelen" HorizontalAlignment="Left" Height="30" Margin="382,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" FontSize="20"/>
+        <TextBlock x:Name="textblockHossz" HorizontalAlignment="Left" Height="30" Margin="363,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" FontSize="20"/>
+        <Button x:Name="buttonMentes" Content="Eredmények mentése" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top" Width="227" Height="35" FontSize="20"/>
 
     </Grid>
 </Window>
