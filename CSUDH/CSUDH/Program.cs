@@ -28,6 +28,14 @@ namespace CSUDH
 
             Console.WriteLine($"3.feladat: Domainek száma:{domains.Count}");
 
+            var elso = domains.First();
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine($"{i+1}.szint:{elso.GetDomain(i+1)}");
+            }
+
+
+
             Console.ReadKey();
         }
     }

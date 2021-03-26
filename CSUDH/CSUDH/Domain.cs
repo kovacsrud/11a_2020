@@ -17,5 +17,22 @@ namespace CSUDH
             DomainName = e[0];
             IpAddress = e[1];
         }
+
+        public string GetDomain(int szint)
+        {
+            var e = DomainName.Split('.');
+
+            Array.Reverse(e);
+
+            if (szint>e.Length)
+            {
+                return "nincs";
+            } else
+            {
+                return e[szint-1];
+            }
+
+            
+        }
     }
 }
