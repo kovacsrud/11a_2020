@@ -24,5 +24,20 @@ namespace WpfSpeed
         {
             InitializeComponent();
         }
+
+        private void buttonSzamol_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var sebessegKmh = Convert.ToDouble(textboxKmh.Text);
+                var sebessegMs = sebessegKmh / 3.6;
+
+                textblockMs.Text = $"{sebessegMs:0.00} m";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Számot kell megadni!","Hiba!",MessageBoxButton.OK,MessageBoxImage.Error);
+            }
+        }
     }
 }
