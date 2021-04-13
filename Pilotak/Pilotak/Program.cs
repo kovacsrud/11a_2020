@@ -44,7 +44,19 @@ namespace Pilotak
             var legkisebbRajtszam = rajtszamosPilotak.Find(x=>x.Rajtszam==rajtszamosPilotak.Min(y=>y.Rajtszam));
             
             Console.WriteLine($"6.feladat:{legkisebbRajtszam.Nemzetiseg}");
-            
+
+            var osszesit = rajtszamosPilotak.ToLookup(x=>x.Rajtszam);
+
+            string kiir = "";
+            foreach (var i in osszesit)
+            {
+
+                if (i.Count()>1)
+                {
+                    kiir += i.Key + ",";
+                }
+            }
+            Console.WriteLine(kiir.TrimEnd(','));
 
             Console.ReadKey();
         }
