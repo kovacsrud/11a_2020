@@ -43,8 +43,12 @@ namespace Balkezesek
                 Console.Write("Hibás érték, újra:");
                 evszam = Convert.ToInt32(Console.ReadLine());
             }
-         
 
+            var atlagsuly = dobok.FindAll(x=>x.Elso.Year>=evszam && x.Utolso.Year<=evszam).Average(x=>x.Suly);
+
+            Console.WriteLine($"Átlagsúly:{atlagsuly:0.00}, kg-ban {atlagsuly/2:0.00}");
+
+            //A fenti példa alapján határozza meg az átlagmagasságot is
 
             Console.ReadKey();
         }
