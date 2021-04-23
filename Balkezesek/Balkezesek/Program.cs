@@ -50,6 +50,10 @@ namespace Balkezesek
 
             //A fenti példa alapján határozza meg az átlagmagasságot is
 
+            var atlagmagassag = dobok.FindAll(x => x.Elso.Year >= evszam && x.Utolso.Year <= evszam).Average(x=>x.Magassag);
+
+            Console.WriteLine($"Átlagmagasság:{atlagmagassag:0.00}, cm-ben {atlagmagassag*2.54:0.00}");
+
             Console.ReadKey();
         }
     }
